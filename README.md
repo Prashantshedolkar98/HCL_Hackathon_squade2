@@ -4,6 +4,7 @@
 A full-stack application that allows users to apply for a credit card, tracks application status, and automates approval decisions based on business rules. and showing  credit score 
 
 
+
 #  Features
 
 * Apply for credit card
