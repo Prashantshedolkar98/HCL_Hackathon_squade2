@@ -116,4 +116,4 @@ npm run dev
 
 # Conclusion
 
-This system demonstrates a scalable full-stack architecture with real-world business logic for credit card processing.
+# This system demonstrates a scalable full-stack architecture with real-world business logic for credit card processing.
