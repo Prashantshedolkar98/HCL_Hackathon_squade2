@@ -1,52 +1,30 @@
 import React, { useState } from 'react';
+import AlreadyAppliedCard from './features/components/AlreadyApplied';
 
-// Define the shape of your form data
-interface UserData {
-  username: string;
-  email: string;
-}
+import { ApplicationForm } from './features/components/ApplicationForm';
+
 
 export default function App () {
-  const [formData, setFormData] = useState<UserData>({
-    username: '',
-    email: '',
-  });
+  const [showSearchedUser, setShowSearchedUser] = useState(false);
+  const [isApply, setApply] = useState(false);
+  
 
-  // Type the change event for input elements
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
 
-  // Type the form submission event
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log('Form Submitted:', formData);
-  };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="username">Username:</label>
-        <input
-          id="username"
-          name="username"
-          type="text"
-          value={formData.username}
-          onChange={handleChange}
-        />
-      </div>
-      <div>
-        <label htmlFor="email">Email:</label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          value={formData.email}
-          onChange={handleChange}
-        />
-      </div>
-      <button type="submit">Submit</button>
-    </form>
+  
+  <div>
+    
+    { !showSearchedUser && !isApply && <div className='d-flex align-items-center justify-content-around mt-5'>
+      <button className='btn btn-primary' onClick={()=>setApply(true)}>Apply for New</button>
+
+      <button className='btn btn-primary' onClick={()=>setShowSearchedUser(!showSearchedUser)}>Already Applied credit card</button>
+
+    </div>}
+      
+
+    {showSearchedUser && <AlreadyAppliedCard />}
+    {isApply && <ApplicationForm/>}
+    </div>
   );
 };

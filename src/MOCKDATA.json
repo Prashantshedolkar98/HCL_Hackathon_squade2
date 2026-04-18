@@ -1,0 +1,37 @@
+[
+    {
+        "customer_ID": "1",
+        "f_name": "Prashant",
+        "l_name": "Shedolkar",
+        "dob": "27-05-1990",
+        "panNumber": "ABCD2345W",
+        "annualIncome": "200000-5000000",
+        "tracking_ID": "12qw34",
+        "email": "p@gmail.com",
+        "status": "Your applied credit card has dispatched on 20-03-2026"
+
+    },
+     {
+        "customer_ID": "2",
+        "f_name": "Aditi",
+        "l_name": "Marathe",
+        "dob": "27-05-1990",
+        "panNumber": "ABCD2346W",
+        "annualIncome": "100000-20000000",
+        "tracking_ID": "12qw34",
+        "email" : "a@gmail.com",
+        "status": "Your applied card is in pending state"
+
+    },
+     {
+        "customer_ID": "3",
+        "f_name": "Gorakh",
+        "l_name": "Shelke",
+        "dob": "27-05-1990",
+        "panNumber": "ABCD2347W",
+        "annualIncome": "2000000-50000000",
+        "tracking_ID": "12qw34",
+        "status": "Your Applied card has successfully delivered"
+
+    }
+]
